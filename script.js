@@ -43,7 +43,7 @@ async function init() {
     document.getElementById("startBtn").style.display = "none";
 
     // Convenience function to setup a webcam
-    const flip = true; // whether to flip the webcam
+    const flip = false; // whether to flip the webcam
     webcam = new tmImage.Webcam(300, 200, flip); // width, height, flip
     await webcam.setup({ facingMode: "environment" }); 
     await webcam.play();
