@@ -4,9 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
     <title>Plant Recognition</title>
 </head>
-<body>
-    
-</body>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+        <script src="script.js"></script>
+
+        <div class="container">
+            <div class="texte" style="font-size: 24px">Teachable Machine <br> Reconaissance des plantes</div>
+            <div id="webcam-container" class="webcam-container inactive">
+                <div id="overlay" class="webcam-overlay">Appuyez sur "Commencer"</div>
+            </div>
+            <div class="buttons">
+                <button id="startBtn" type="button" onclick="init()">Commencer</button>
+                <button class="appear" id="predictBtn" type="button" onclick="predict()">Chercher</button>
+                <button class="appear" id="restartBtn" type="button" onclick="restart()">Recommencer</button>
+            </div>
+            <div id="result" class="texte appear"></div>
+            
+            <div class="separator appear2"></div>
+
+            <div>
+                <div class="texte appear2">Images similaires à <br> l'espèce trouvée</div>
+                <table id="imageTable">
+                </table>
+            </div>
+        </div>
+
+        <div id="fullscreenImageContainer" class="fullscreen-image-container">
+            <span class="close-btn" onclick="closeFullscreenImage()">&times;</span>
+            <img id="fullscreenImage" class="fullscreen-image" src="" alt="">
+        </div>
+    </body>
 </html>
