@@ -1,8 +1,8 @@
-// More API functions here:
+ // More API functions here:
 // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
 // the link to your model provided by Teachable Machine export panel
-const URL = "https://teachablemachine.withgoogle.com/models/CjH2h8vm9/";
+const URL = "https://teachablemachine.withgoogle.com/models/7YlJxoDy8/";
 
 let model, webcam, resultLabel, maxPredictions;
 
